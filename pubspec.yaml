@@ -1,0 +1,32 @@
+name: handgesture
+description: "Final Year Project - Hand Gesture Recognition using MediaPipe"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.11.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # --- CRITICAL: THE AI & CAMERA STACK ---
+  # This version is optimized for MediaPipe Tasks on Android
+  hand_landmarker: ^2.1.2
+  camera: ^0.11.0+2
+  permission_handler: ^11.3.1
+  path_provider: ^2.1.2
+  cloud_firestore: ^6.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Registering the model file you downloaded
+  assets:
+    - assets/hand_landmarker.task 
